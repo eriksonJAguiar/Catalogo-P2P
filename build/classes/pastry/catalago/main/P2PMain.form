@@ -275,6 +275,9 @@
                   <Color id="Cursor em Forma de M&#xe3;o"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_UploadActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

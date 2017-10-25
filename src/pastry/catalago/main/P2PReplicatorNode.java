@@ -4,9 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.Date;
-
 import javax.swing.JTextArea;
-
 import rice.environment.Environment;
 import rice.p2p.commonapi.IdFactory;
 import rice.pastry.NodeIdFactory;

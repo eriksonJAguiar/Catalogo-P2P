@@ -133,6 +133,11 @@ public class P2PMain extends javax.swing.JFrame {
 
         jButton_Upload.setText("Upload");
         jButton_Upload.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_Upload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_UploadActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelConfLayout = new javax.swing.GroupLayout(jPanelConf);
         jPanelConf.setLayout(jPanelConfLayout);
@@ -223,6 +228,10 @@ public class P2PMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_startP2PNetworkActionPerformed
 
     private void jButton_DownloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_DownloadActionPerformed
+        
+    }//GEN-LAST:event_jButton_DownloadActionPerformed
+
+    private void jButton_UploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_UploadActionPerformed
         Thread startPublish = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -232,7 +241,7 @@ public class P2PMain extends javax.swing.JFrame {
             }
         });
         startPublish.start();
-    }//GEN-LAST:event_jButton_DownloadActionPerformed
+    }//GEN-LAST:event_jButton_UploadActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
