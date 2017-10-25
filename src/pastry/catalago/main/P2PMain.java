@@ -11,6 +11,7 @@ public class P2PMain extends javax.swing.JFrame {
 
     private static Environment env;
     private P2PReplicatorNode node;
+    private String user;
 
     public P2PMain() {
         initComponents();
@@ -206,7 +207,7 @@ public class P2PMain extends javax.swing.JFrame {
         final int bindport = Integer.parseInt(jTextField_bindPort.getText());
         final String bootaddress = jTextField_bootAddress.getText();
         final int bootport = Integer.parseInt(jTextField_bootPort.getText());
-        String user = jTextField_userName.getText();
+        user = jTextField_userName.getText();
         Thread startNode = new Thread(new Runnable() {
             @Override
             public void run() {
