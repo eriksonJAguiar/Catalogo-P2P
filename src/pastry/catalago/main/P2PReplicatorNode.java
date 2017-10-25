@@ -41,7 +41,7 @@ public class P2PReplicatorNode {
 		// construct a new file transfer application
 		app_file = new P2PFileTransferApplicationImpl(node, factory,log);
 		// construct a new scribe application
-		File f = new File("storeage\\original.txt");
+		File f = new File("storeage/original.txt");
 		app_msg = new P2PFileReplicationMessegeApplicationImpl(node, user, log, app_file);
 		app_scribe = new P2PFileReplicatorScribeImpl(node, app_msg,log,new Date(f.lastModified()));
 		bootHandle = bootaddress;

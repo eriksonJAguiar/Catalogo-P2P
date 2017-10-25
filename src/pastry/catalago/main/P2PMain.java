@@ -226,7 +226,7 @@ public class P2PMain extends javax.swing.JFrame {
         Thread startPublish = new Thread(new Runnable() {
             @Override
             public void run() {
-                File f = new File("storage\\original.txt");
+                File f = new File("storage/original.txt");
                 node.publishUpdate(new Date(f.lastModified()));
                 jTextArea_logText.append("Announcing last file update time.\n");
             }
