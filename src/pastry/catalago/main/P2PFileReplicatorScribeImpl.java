@@ -69,7 +69,7 @@ public class P2PFileReplicatorScribeImpl implements ScribeMultiClient,
 
     public void sendMulticast(String user) {
         P2PFileReplicatorContentImpl myMessage = new P2PFileReplicatorContentImpl(
-                endpoint.getLocalNodeHandle(), lastUpdated, "original.txt",
+                endpoint.getLocalNodeHandle(), lastUpdated, "catalogo.xml",
                 user, true);
         scribe.publish(topic, myMessage);
         seqNum++;
@@ -80,7 +80,7 @@ public class P2PFileReplicatorScribeImpl implements ScribeMultiClient,
      */
     public void sendAnycast(String user) {
         P2PFileReplicatorContentImpl myMessage = new P2PFileReplicatorContentImpl(
-                endpoint.getLocalNodeHandle(), new Date(), "original.txt",
+                endpoint.getLocalNodeHandle(), new Date(), "catalogo.xml",
                 user, true);
         scribe.anycast(topic, myMessage);
         seqNum++;
